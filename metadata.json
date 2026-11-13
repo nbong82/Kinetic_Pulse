@@ -1,0 +1,6 @@
+{
+  "name": "Kinetic Pulse",
+  "description": "Precision endurance running telemetry, live split tracking, and run logging instrumentation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Chivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Chivo", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-obsidian: #0D1117;
+  --color-elevated: #161B26;
+  --color-active-surface: #1F2636;
+  --color-slate-ctrl: #1E2638;
+  --color-volt: #10E66A;
+  --color-cyan-pulse: #38E1FF;
+  --color-muted-silver: #8B949E;
+  --color-alert-red: #FF5C5C;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0D1117;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Primary Save Run Physical Anchor Button */
+.btn-volt-anchor {
+  background-color: #10E66A;
+  color: #0D1117;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25), 0 0 20px rgba(16, 230, 106, 0.35);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.btn-volt-anchor:hover:not(:disabled) {
+  background-color: #2df37f;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25), 0 0 26px rgba(16, 230, 106, 0.5);
+}
+
+.btn-volt-anchor:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25), 0 0 14px rgba(16, 230, 106, 0.35);
+}
+
+/* Level 1 Card Surface */
+.kp-card {
+  background-color: #161B26;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Level 2 Active Surface */
+.kp-card-active {
+  background-color: #1F2636;
+  border: 1px solid rgba(16, 230, 106, 0.35);
+  box-shadow: 0 0 24px -4px rgba(16, 230, 106, 0.15);
+}
+
+/* Level 3 Sticky Action Bar */
+.kp-sticky-bar {
+  background-color: rgba(18, 22, 31, 0.88);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+/* Custom subtle dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #242D3D;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #354156;
+}
